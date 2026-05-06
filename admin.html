@@ -160,7 +160,7 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:36px 24p
 <form onsubmit="return false">
 <div class="form-grid">
 <div class="fg"><label>Название товара *</label><input type="text" id="nN" class="fi" placeholder="Например: iPhone 15 Pro" required></div>
-<div class="fg"><label>Цена (₽) *</label><input type="number" id="nP" class="fi" placeholder="99990" min="0" step="0.01" required></div>
+<div class="fg"><label>Цена (EGP) *</label><input type="number" id="nP" class="fi" placeholder="99990" min="0" step="0.01" required></div>
 <div class="fg full"><label>Картинка (URL)</label><input type="url" id="nI" class="fi" placeholder="https://..." oninput="pvA(this.value)"><div class="img-preview-wrap" id="apw"><img id="api" class="img-preview" alt=""><p class="img-preview-label">Превью</p></div></div>
 <div class="fg full"><label>Описание</label><textarea id="nD" class="ft" placeholder="Описание..."></textarea></div>
 </div>
@@ -218,7 +218,7 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:36px 24p
 <div class="modal-body">
 <form onsubmit="return false"><input type="hidden" id="eid">
 <div class="fg"><label>Название *</label><input type="text" id="eName" class="fi" required></div>
-<div class="fg"><label>Цена (₽) *</label><input type="number" id="ePrice" class="fi" min="0" step="0.01" required></div>
+<div class="fg"><label>Цена (EGP) *</label><input type="number" id="ePrice" class="fi" min="0" step="0.01" required></div>
 <div class="fg"><label>Картинка</label><input type="url" id="eImage" class="fi" placeholder="URL" oninput="pvE(this.value)"><div class="img-preview-wrap" id="epw"><img id="epi" class="img-preview" alt=""><p class="img-preview-label">Превью</p></div></div>
 <div class="fg"><label>Описание</label><textarea id="eDesc" class="ft"></textarea></div>
 <button type="button" class="btn btn-primary" style="width:100%" onclick="saveEdit()"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>Сохранить</button></form>
@@ -258,7 +258,7 @@ function uP(id,d){
 }
 function dP(id){sP(gP().filter(function(p){return p.id!==id}))}
 
-var fp=function(p){return Number(p).toLocaleString('ru-RU')+' ₽'};
+var fp=function(p){return Number(p).toLocaleString('ru-RU')+' EGP'};
 var eh=function(s){var d=document.createElement('span');d.textContent=s;return d.innerHTML};
 var dcId=null;
 
