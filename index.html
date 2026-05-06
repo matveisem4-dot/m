@@ -155,7 +155,7 @@ function gO(){try{return JSON.parse(localStorage.getItem(K.O))||[]}catch(e){retu
 function aO(d){const o=gO();o.push({...d,id:Date.now().toString(36)+Math.random().toString(36).substr(2,6)});localStorage.setItem(K.O,JSON.stringify(o))}
 
 let cur=null;
-const fp=p=>new Intl.NumberFormat('ru-RU').format(p)+' ₽';
+const fp=p=>new Intl.NumberFormat('ru-RU').format(p)+' EGP';
 const eh=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML};
 
 // INIT
